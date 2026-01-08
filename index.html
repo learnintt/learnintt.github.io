@@ -415,108 +415,71 @@
               <div class="title">Undergraduate focusing on robotics & safe RL</div>
               <div class="subtitle">
                 I am an undergraduate student at Xi'an Jiaotong University.  
-                My main interests lie in quadruped rescue robots, safe reinforcement learning with world models,
-                and embedded real-time control for cyber-physical systems.
+                My main interests lie in quadruped platform development, safe reinforcement learning with world models,
+                and hardware-in-the-loop (HIL) based embedded control for cyber-physical systems.
               </div>
             </div>
 
             <div class="tags">
-              <span class="tag accent">Quadruped Rescue Robot</span>
-              <span class="tag">Safe Reinforcement Learning</span>
+              <span class="tag accent">Safe Reinforcement Learning</span>
+              <span class="tag">Cost & Safety Constraints</span>
               <span class="tag">World Models</span>
-              <span class="tag">Embedded Systems</span>
+              <span class="tag">Quadruped Platforms</span>
+              <span class="tag">HIL Development</span>
               <span class="tag">Control & Optimization</span>
             </div>
 
             <div class="section-title">Research Interests</div>
             <ul class="list">
-              <li>· Safe reinforcement learning and constrained control.</li>
-              <li>· World-model-based RL for complex locomotion tasks.</li>
-              <li>· Autonomous path planning and terrain-aware locomotion.</li>
-              <li>· Embedded real-time signal processing and control.</li>
+              <li>· Safe reinforcement learning and constrained Markov decision processes.</li>
+              <li>· World-model-based RL for complex locomotion and control tasks.</li>
+              <li>· Quadruped platform design and terrain-aware locomotion control.</li>
+              <li>· HIL-based validation of embedded controllers and RL algorithms.</li>
             </ul>
           </section>
 
-          <!-- Right: Research / Projects / Skills / Contact -->
+          <!-- Right: Research / Skills / Contact -->
           <section class="right">
-            <!-- Research / Experience -->
-            <div class="card">
+            <!-- Research & Experience -->
+            <div id="research" class="card">
               <div class="card-header-row">
                 <div>
                   <div class="card-title">Research & Experience</div>
-                  <div class="card-sub">Selected ongoing and past work</div>
+                  <div class="card-sub">Cost & safety, quadruped platforms, and HIL</div>
                 </div>
               </div>
               <ul class="timeline">
                 <li>
                   <div class="tl-time">2024 – now</div>
                   <div class="tl-main">
-                    <div class="tl-title">Intelligent Quadruped Rescue Robot</div>
+                    <div class="tl-title">Cost-aware Safe RL with World Models</div>
                     <div class="tl-extra">
-                      Twelve-DOF quadruped platform for search-and-rescue scenarios,  
-                      autonomous path planning on hexagonal grids, and obstacle-aware locomotion.
+                      Extending Dreamer-style world models with explicit cost signals,  
+                      designing alpha schedules for Lagrangian-style safety terms, and  
+                      studying the trade-off between task return and cumulative cost  
+                      on safety benchmark environments.
                     </div>
                   </div>
                 </li>
                 <li>
                   <div class="tl-time">2024 – now</div>
                   <div class="tl-main">
-                    <div class="tl-title">Safe World-Model-based RL</div>
+                    <div class="tl-title">Quadruped Platform Development</div>
                     <div class="tl-extra">
-                      Extending Dreamer-style world models with explicit cost signals and internalized safety,
-                      studying trade-offs between task performance and safety constraints.
+                      Development of a twelve-DOF quadruped platform for locomotion research,  
+                      including terrain representation with hexagonal grids, path planning,  
+                      and evaluation of different search strategies under realistic time-cost models.
                     </div>
                   </div>
                 </li>
                 <li>
                   <div class="tl-time">2023 – now</div>
                   <div class="tl-main">
-                    <div class="tl-title">Embedded Control & Signal Processing</div>
+                    <div class="tl-title">HIL Development for Embedded Systems</div>
                     <div class="tl-extra">
-                      STM32/MSPM0-based real-time control, multi-channel ADC acquisition,  
-                      FFT-based frequency estimation and digital filter modeling for control-oriented applications.
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Projects (technical only) -->
-            <div id="research" class="card">
-              <div class="card-header-row">
-                <div>
-                  <div class="card-title">Technical Projects</div>
-                  <div class="card-sub">More details available upon request</div>
-                </div>
-              </div>
-              <ul class="timeline">
-                <li>
-                  <div class="tl-time">Robotics</div>
-                  <div class="tl-main">
-                    <div class="tl-title">Rescue-focused quadruped locomotion</div>
-                    <div class="tl-extra">
-                      Comparative study of multiple path-planning strategies (greedy, simulated annealing,  
-                      coverage-based search) on a hexagonal map under realistic time-cost models.
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="tl-time">Safe RL</div>
-                  <div class="tl-main">
-                    <div class="tl-title">Cost-aware world models</div>
-                    <div class="tl-extra">
-                      Alpha-schedule design for Lagrangian-style safety terms,  
-                      long-horizon evaluation on safety benchmark environments.
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="tl-time">Embedded</div>
-                  <div class="tl-main">
-                    <div class="tl-title">Real-time DSP on microcontrollers</div>
-                    <div class="tl-extra">
-                      FFT-based frequency and amplitude estimation, second-order IIR filter fitting  
-                      for analog RLC structures, and on-board visualization on TFT displays.
+                      Hardware-in-the-loop (HIL) setups using STM32/MSPM0 microcontrollers,  
+                      real-time data acquisition, FFT-based analysis, and implementation of  
+                      digital controllers and filters for control-oriented experiments.
                     </div>
                   </div>
                 </li>
@@ -538,6 +501,7 @@
                 <span class="skill">Control Theory · MPC · LQR</span>
                 <span class="skill">Embedded C · STM32 · MSPM0</span>
                 <span class="skill">Digital Signal Processing · FFT · IIR</span>
+                <span class="skill">HIL Experiment Design</span>
                 <span class="skill">LaTeX · Technical Writing</span>
               </div>
             </div>
@@ -551,12 +515,11 @@
                 </div>
               </div>
               <div class="links-row">
-                <!-- TODO: replace with your own email & GitHub -->
-                <a class="link-pill" href="mailto:your_email@example.com">
-                  📧 <span>your_email@example.com</span>
+                <a class="link-pill" href="mailto:chenjunru@stu.xjtu.edu.cn">
+                  📧 <span>chenjunru@stu.xjtu.edu.cn</span>
                 </a>
-                <a class="link-pill" href="https://github.com/your_github" target="_blank">
-                  🐱 GitHub <small>@your_github</small>
+                <a class="link-pill" href="https://github.com/learnintt" target="_blank">
+                  🐱 GitHub <small>@learnintt</small>
                 </a>
               </div>
             </div>
