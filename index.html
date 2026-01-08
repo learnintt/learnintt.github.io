@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>陈俊儒的主页 | Home</title>
+  <title>Junru Chen | Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg: #0f172a;
+      --bg: #0b1220;
       --card-bg: #020617;
       --accent: #38bdf8;
       --accent-soft: rgba(56, 189, 248, 0.15);
       --text-main: #e5e7eb;
       --text-muted: #9ca3af;
       --border-subtle: rgba(148, 163, 184, 0.3);
-      --badge-bg: rgba(148, 163, 184, 0.12);
+      --badge-bg: rgba(148, 163, 184, 0.08);
     }
 
     * {
@@ -25,7 +25,7 @@
       padding: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
         "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1d283a 0, #020617 55%);
+      background: radial-gradient(circle at top, #111827 0, #020617 55%);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
     }
@@ -40,24 +40,22 @@
     .container {
       width: 100%;
       max-width: 960px;
-      background: linear-gradient(145deg, #020617 0, #020617 45%, #020617 100%);
-      border-radius: 24px;
-      border: 1px solid rgba(148, 163, 184, 0.25);
+      background: #020617;
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
       box-shadow:
-        0 24px 80px rgba(15, 23, 42, 0.75),
+        0 24px 80px rgba(15, 23, 42, 0.8),
         0 0 0 1px rgba(15, 23, 42, 0.9);
-      padding: 24px 20px 28px;
+      padding: 22px 18px 24px;
       position: relative;
       overflow: hidden;
     }
 
-    /* 右上角渐变装饰 */
     .glow {
       position: absolute;
       inset: -200px;
       background:
-        radial-gradient(circle at top right, rgba(56, 189, 248, 0.18), transparent 60%),
-        radial-gradient(circle at bottom left, rgba(94, 234, 212, 0.1), transparent 55%);
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent 60%);
       opacity: 0.9;
       pointer-events: none;
       mix-blend-mode: screen;
@@ -68,13 +66,14 @@
       z-index: 1;
     }
 
-    /* 顶部导航 / 名字 + 导航按钮 */
+    /* Top bar */
     .top-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
     }
 
     .brand {
@@ -127,7 +126,7 @@
     .nav-btn {
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.8);
+      background: rgba(15, 23, 42, 0.9);
       padding: 6px 11px;
       font-size: 11px;
       color: var(--text-main);
@@ -139,29 +138,22 @@
       transition: all 0.15s ease-out;
     }
 
-    .nav-btn span {
-      font-size: 12px;
-      opacity: 0.7;
-    }
-
     .nav-btn:hover {
       border-color: var(--accent);
-      background: rgba(15, 23, 42, 0.9);
       transform: translateY(-1px);
       box-shadow: 0 8px 18px rgba(15, 23, 42, 0.8);
     }
 
-    /* 主体区域：左简介 + 右内容 */
+    /* Layout */
     .main {
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.3fr);
-      gap: 20px;
+      gap: 18px;
     }
 
     @media (max-width: 800px) {
       .container {
-        border-radius: 20px;
-        padding: 18px 14px 22px;
+        padding: 18px 14px 20px;
       }
       .main {
         grid-template-columns: minmax(0, 1fr);
@@ -175,12 +167,12 @@
       }
     }
 
-    /* 左侧卡片：简介 + 标签 */
+    /* Left: About */
     .panel {
-      background: radial-gradient(circle at top, #020617 0, #020617 45%, #000000 100%);
-      border-radius: 20px;
+      background: #020617;
+      border-radius: 16px;
       border: 1px solid rgba(148, 163, 184, 0.45);
-      padding: 16px 16px 18px;
+      padding: 14px 14px 16px;
       position: relative;
       overflow: hidden;
     }
@@ -189,8 +181,8 @@
       content: "";
       position: absolute;
       inset: -50px;
-      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.08), transparent 60%);
-      opacity: 0.75;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.09), transparent 60%);
+      opacity: 0.7;
       pointer-events: none;
     }
 
@@ -199,7 +191,7 @@
     }
 
     .hello {
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--accent);
@@ -208,8 +200,8 @@
     }
 
     .title {
-      font-size: 22px;
-      font-weight: 650;
+      font-size: 20px;
+      font-weight: 600;
       letter-spacing: 0.02em;
       margin-bottom: 4px;
     }
@@ -217,7 +209,7 @@
     .subtitle {
       font-size: 12px;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .tags {
@@ -244,12 +236,12 @@
     }
 
     .section-title {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(148, 163, 184, 0.9);
-      margin: 12px 0 6px;
+      color: rgba(148, 163, 184, 0.95);
+      margin: 10px 0 6px;
     }
 
     .list {
@@ -264,49 +256,39 @@
       margin-bottom: 3px;
     }
 
-    /* 右侧：多块内容 */
+    /* Right: Cards */
     .right {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .card {
-      background: rgba(15, 23, 42, 0.95);
-      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.97);
+      border-radius: 16px;
       border: 1px solid rgba(148, 163, 184, 0.45);
-      padding: 14px 14px 12px;
+      padding: 12px 12px 11px;
     }
 
     .card-header-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       gap: 8px;
     }
 
     .card-title {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(209, 213, 219, 0.95);
+      color: rgba(229, 231, 235, 0.95);
     }
 
     .card-sub {
       font-size: 11px;
       color: var(--text-muted);
-    }
-
-    .pill {
-      font-size: 11px;
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(15, 118, 110, 0.15);
-      border: 1px solid rgba(45, 212, 191, 0.6);
-      color: #a5f3fc;
-      white-space: nowrap;
     }
 
     .timeline {
@@ -319,8 +301,8 @@
     .timeline li {
       display: flex;
       gap: 8px;
-      padding: 5px 0;
-      border-bottom: 1px dashed rgba(31, 41, 55, 0.9);
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(31, 41, 55, 0.85);
     }
 
     .timeline li:last-child {
@@ -373,7 +355,7 @@
       padding: 3px 8px;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.65);
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.9);
       text-decoration: none;
       color: #e5e7eb;
       display: inline-flex;
@@ -394,7 +376,7 @@
     }
 
     .footer {
-      margin-top: 10px;
+      margin-top: 8px;
       font-size: 11px;
       color: var(--text-muted);
       display: flex;
@@ -409,204 +391,179 @@
     <div class="container">
       <div class="glow"></div>
       <div class="content">
-        <!-- 顶部：名字 + 导航 -->
+        <!-- Top -->
         <header class="top-bar">
           <div class="brand">
-            <div class="avatar">C</div>
+            <div class="avatar">J</div>
             <div class="brand-text">
-              <div class="brand-name">陈俊儒</div>
-              <div class="brand-sub">越杰2201 · 四足救援机器人 / Safe RL / 传感器融合</div>
+              <div class="brand-name">Junru Chen</div>
+              <div class="brand-sub">Undergraduate · Xi'an Jiaotong University</div>
             </div>
           </div>
           <nav class="nav-links">
-            <a class="nav-btn" href="#about">
-              关于我 <span>About</span>
-            </a>
-            <a class="nav-btn" href="#projects">
-              项目 <span>Projects</span>
-            </a>
-            <a class="nav-btn" href="#contact">
-              联系 <span>Contact</span>
-            </a>
+            <a class="nav-btn" href="#about">About</a>
+            <a class="nav-btn" href="#research">Research</a>
+            <a class="nav-btn" href="#contact">Contact</a>
           </nav>
         </header>
 
         <main class="main">
-          <!-- 左侧：简介 -->
+          <!-- Left: About -->
           <section id="about" class="panel">
             <div class="panel-header">
-              <div class="hello">Hello, 你好</div>
-              <div class="title">本科生 · 在路上的研究者</div>
+              <div class="hello">About</div>
+              <div class="title">Undergraduate focusing on robotics & safe RL</div>
               <div class="subtitle">
-                目前就读于西安交通大学越杰学院，方向包括四足救援机器人、世界模型强化学习、安全控制，以及光纤传感与嵌入式系统。
+                I am an undergraduate student at Xi'an Jiaotong University.  
+                My main interests lie in quadruped rescue robots, safe reinforcement learning with world models,
+                and embedded real-time control for cyber-physical systems.
               </div>
             </div>
 
             <div class="tags">
-              <span class="tag accent">四足救援机器人</span>
-              <span class="tag">Safe RL & 世界模型</span>
-              <span class="tag">嵌入式 / STM32 / MSPM0</span>
-              <span class="tag">FBG 光纤传感</span>
-              <span class="tag">控制与最优化</span>
+              <span class="tag accent">Quadruped Rescue Robot</span>
+              <span class="tag">Safe Reinforcement Learning</span>
+              <span class="tag">World Models</span>
+              <span class="tag">Embedded Systems</span>
+              <span class="tag">Control & Optimization</span>
             </div>
 
-            <div class="section-title">CURRENT FOCUS</div>
+            <div class="section-title">Research Interests</div>
             <ul class="list">
-              <li>· 基于多传感器融合的智能越障四足救援机器人</li>
-              <li>· 世界模型下的安全强化学习与内化安全约束</li>
-              <li>· FBG 薄膜声学传感与 COMSOL 仿真</li>
-              <li>· 嵌入式实时控制与边缘智能部署</li>
-            </ul>
-
-            <div class="section-title">HIGHLIGHTS</div>
-            <ul class="list">
-              <li>· 互联网+ 红旅赛道省赛银奖</li>
-              <li>· MATE 水下机器人中国赛区冠军</li>
-              <li>· 美赛 MCM/ICM F 奖</li>
-              <li>· 校级暑期社会实践“优秀调研员”</li>
+              <li>· Safe reinforcement learning and constrained control.</li>
+              <li>· World-model-based RL for complex locomotion tasks.</li>
+              <li>· Autonomous path planning and terrain-aware locomotion.</li>
+              <li>· Embedded real-time signal processing and control.</li>
             </ul>
           </section>
 
-          <!-- 右侧：经历 / 项目 / 技能 / 联系 -->
+          <!-- Right: Research / Projects / Skills / Contact -->
           <section class="right">
-            <!-- 经历 -->
+            <!-- Research / Experience -->
             <div class="card">
               <div class="card-header-row">
                 <div>
-                  <div class="card-title">经历 Experience</div>
-                  <div class="card-sub">Research · Competition · Practice</div>
+                  <div class="card-title">Research & Experience</div>
+                  <div class="card-sub">Selected ongoing and past work</div>
                 </div>
-                <span class="pill">长期更新中</span>
               </div>
               <ul class="timeline">
                 <li>
-                  <div class="tl-time">2024 - 至今</div>
+                  <div class="tl-time">2024 – now</div>
                   <div class="tl-main">
-                    <div class="tl-title">基于多传感器融合的智能越障四足救援机器人</div>
+                    <div class="tl-title">Intelligent Quadruped Rescue Robot</div>
                     <div class="tl-extra">
-                      十二自由度四足平台 · 自主路径规划 · 复杂地形越障 · 目标搜救
+                      Twelve-DOF quadruped platform for search-and-rescue scenarios,  
+                      autonomous path planning on hexagonal grids, and obstacle-aware locomotion.
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="tl-time">2024</div>
+                  <div class="tl-time">2024 – now</div>
                   <div class="tl-main">
-                    <div class="tl-title">基于 Safe World Model 的强化学习研究</div>
+                    <div class="tl-title">Safe World-Model-based RL</div>
                     <div class="tl-extra">
-                      改造 DreamerV3 / SafeDreamer，引入成本信号与内化安全机制
+                      Extending Dreamer-style world models with explicit cost signals and internalized safety,
+                      studying trade-offs between task performance and safety constraints.
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="tl-time">2023 - 2024</div>
+                  <div class="tl-time">2023 – now</div>
                   <div class="tl-main">
-                    <div class="tl-title">FBG 声学传感与 COMSOL 仿真</div>
+                    <div class="tl-title">Embedded Control & Signal Processing</div>
                     <div class="tl-extra">
-                      PDMS 薄膜 + FBG 结构 · 声压-应变响应 · 干涉解调与信号处理
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="tl-time">实践 · 志愿</div>
-                  <div class="tl-main">
-                    <div class="tl-title">红星照耀中国社会实践 & 志愿服务</div>
-                    <div class="tl-extra">
-                      探访红色记忆 · 朋辈辅导员 · 挑战者杯一对一志愿者
+                      STM32/MSPM0-based real-time control, multi-channel ADC acquisition,  
+                      FFT-based frequency estimation and digital filter modeling for control-oriented applications.
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
 
-            <!-- 项目 -->
-            <div id="projects" class="card">
+            <!-- Projects (technical only) -->
+            <div id="research" class="card">
               <div class="card-header-row">
                 <div>
-                  <div class="card-title">主要项目 Projects</div>
-                  <div class="card-sub">一部分代表性项目</div>
+                  <div class="card-title">Technical Projects</div>
+                  <div class="card-sub">More details available upon request</div>
                 </div>
               </div>
               <ul class="timeline">
                 <li>
-                  <div class="tl-time">四足机器人</div>
+                  <div class="tl-time">Robotics</div>
                   <div class="tl-main">
-                    <div class="tl-title">救援场景下的智能越障与路径规划</div>
+                    <div class="tl-title">Rescue-focused quadruped locomotion</div>
                     <div class="tl-extra">
-                      多传感器融合（IMU / 激光 / 视觉） · 六边形网格路径规划 · 多算法对比（贪心 / 模拟退火 / 割草法）
+                      Comparative study of multiple path-planning strategies (greedy, simulated annealing,  
+                      coverage-based search) on a hexagonal map under realistic time-cost models.
                     </div>
                   </div>
                 </li>
                 <li>
                   <div class="tl-time">Safe RL</div>
                   <div class="tl-main">
-                    <div class="tl-title">内化安全约束的世界模型强化学习</div>
+                    <div class="tl-title">Cost-aware world models</div>
                     <div class="tl-extra">
-                      DreamerV3 + cost 信号 · α 调度 · 安全性能与任务性能的平衡研究
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="tl-time">FBG</div>
-                  <div class="tl-main">
-                    <div class="tl-title">PDMS 薄膜 FBG 声学传感器设计</div>
-                    <div class="tl-extra">
-                      压力声学-固体耦合仿真 · 敏感结构优化 · M-Z 干涉解调方案
+                      Alpha-schedule design for Lagrangian-style safety terms,  
+                      long-horizon evaluation on safety benchmark environments.
                     </div>
                   </div>
                 </li>
                 <li>
                   <div class="tl-time">Embedded</div>
                   <div class="tl-main">
-                    <div class="tl-title">STM32/MSPM0 实时控制与信号处理</div>
+                    <div class="tl-title">Real-time DSP on microcontrollers</div>
                     <div class="tl-extra">
-                      FFT 频率估计 · IIR 滤波器拟合 · TFT 实时显示 · 多路 ADC 采集
+                      FFT-based frequency and amplitude estimation, second-order IIR filter fitting  
+                      for analog RLC structures, and on-board visualization on TFT displays.
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
 
-            <!-- 技能 & 联系 -->
+            <!-- Skills -->
             <div class="card">
               <div class="card-header-row">
                 <div>
-                  <div class="card-title">技能 Skills</div>
-                  <div class="card-sub">持续学习 / 持续折腾</div>
+                  <div class="card-title">Skills</div>
+                  <div class="card-sub">Tools & topics I use frequently</div>
                 </div>
               </div>
               <div class="skills-grid">
                 <span class="skill">Python · PyTorch · JAX</span>
-                <span class="skill">强化学习 / Safe RL</span>
-                <span class="skill">控制理论 · MPC · LQR</span>
-                <span class="skill">嵌入式 C / STM32 / MSPM0</span>
-                <span class="skill">信号处理 · FFT · 滤波器</span>
-                <span class="skill">COMSOL 多物理场仿真</span>
-                <span class="skill">LaTeX / 学术写作</span>
+                <span class="skill">Reinforcement Learning · Safe RL</span>
+                <span class="skill">World-Model RL (Dreamer-style)</span>
+                <span class="skill">Control Theory · MPC · LQR</span>
+                <span class="skill">Embedded C · STM32 · MSPM0</span>
+                <span class="skill">Digital Signal Processing · FFT · IIR</span>
+                <span class="skill">LaTeX · Technical Writing</span>
               </div>
             </div>
 
+            <!-- Contact -->
             <div id="contact" class="card">
               <div class="card-header-row">
                 <div>
-                  <div class="card-title">联系我 Contact</div>
-                  <div class="card-sub">欢迎交流科研 / 比赛 / 项目合作</div>
+                  <div class="card-title">Contact</div>
+                  <div class="card-sub">Feel free to reach out</div>
                 </div>
               </div>
               <div class="links-row">
-                <!-- 这里把邮箱和 GitHub 填成你自己的 -->
+                <!-- TODO: replace with your own email & GitHub -->
                 <a class="link-pill" href="mailto:your_email@example.com">
                   📧 <span>your_email@example.com</span>
                 </a>
                 <a class="link-pill" href="https://github.com/your_github" target="_blank">
                   🐱 GitHub <small>@your_github</small>
                 </a>
-                <!-- 如果你有知乎 / 博客 / 公众号，可以继续加 -->
               </div>
             </div>
 
             <footer class="footer">
               <span>Last update: 2026</span>
-              <span>Built with ❤️ &amp; GitHub Pages</span>
+              <span>Built with GitHub Pages</span>
             </footer>
           </section>
         </main>
